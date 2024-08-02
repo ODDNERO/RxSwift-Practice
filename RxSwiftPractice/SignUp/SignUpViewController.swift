@@ -15,9 +15,9 @@ class SignUpViewController: UIViewController {
         case invalidEmail
     }
     
-    let disposeBag = DisposeBag()
     let emailData = PublishSubject<String>()
     let basicColor = Observable.just(UIColor.systemGreen)
+    let disposeBag = DisposeBag()
 
     let emailTextField = SignTextField(placeholderText: "이메일을 입력해 주세요")
     let validationButton = UIButton()
