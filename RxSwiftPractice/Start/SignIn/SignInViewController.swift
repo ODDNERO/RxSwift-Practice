@@ -18,9 +18,13 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         configureView()
+        signInButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
     }
     
+    @objc func signInButtonClicked() {
+        navigationController?.pushViewController(ShoppingViewController(), animated: true)
+    }
     @objc func signUpButtonClicked() {
         navigationController?.pushViewController(SignUpViewController(), animated: true)
     }

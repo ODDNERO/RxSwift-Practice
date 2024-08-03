@@ -51,7 +51,7 @@ extension PasswordViewController {
 
         nextButton.rx.tap
             .bind(with: self) { owner, _ in
-                owner.navigationController?.pushViewController(BirthdayViewController(), animated: true)
+                owner.navigationController?.pushViewController(PhoneViewController(), animated: true)
             }
             .disposed(by: disposeBag)
     }

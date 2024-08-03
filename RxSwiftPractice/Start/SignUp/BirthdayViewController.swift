@@ -95,7 +95,7 @@ extension BirthdayViewController {
         
         nextButton.rx.tap
             .bind(with: self) { owner, _ in
-                owner.showSwitchVCAlert(to: SearchViewController())
+                owner.showSwitchVCAlert(to: ShoppingViewController())
             }
             .disposed(by: disposeBag)
         

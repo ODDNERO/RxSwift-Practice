@@ -15,18 +15,16 @@
 		CE87EE812C5B9B2000DC5FD9 /* PointButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE702C5B9B2000DC5FD9 /* PointButton.swift */; };
 		CE87EE822C5B9B2000DC5FD9 /* SignTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE712C5B9B2000DC5FD9 /* SignTextField.swift */; };
 		CE87EE832C5B9B2000DC5FD9 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE732C5B9B2000DC5FD9 /* BirthdayViewController.swift */; };
-		CE87EE842C5B9B2000DC5FD9 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE742C5B9B2000DC5FD9 /* NicknameViewController.swift */; };
 		CE87EE852C5B9B2000DC5FD9 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE752C5B9B2000DC5FD9 /* PhoneViewController.swift */; };
 		CE87EE862C5B9B2000DC5FD9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE772C5B9B2000DC5FD9 /* SignInViewController.swift */; };
 		CE87EE872C5B9B2000DC5FD9 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE782C5B9B2000DC5FD9 /* SignInViewModel.swift */; };
 		CE87EE882C5B9B2000DC5FD9 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */; };
 		CE87EE892C5B9B2000DC5FD9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE7B2C5B9B2000DC5FD9 /* SignUpViewController.swift */; };
-		CE87EE8A2C5B9B2000DC5FD9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE7D2C5B9B2000DC5FD9 /* DetailViewController.swift */; };
-		CE87EE8B2C5B9B2000DC5FD9 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE7E2C5B9B2000DC5FD9 /* SearchTableViewCell.swift */; };
-		CE87EE8C2C5B9B2000DC5FD9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE7F2C5B9B2000DC5FD9 /* SearchViewController.swift */; };
 		CE87EE912C5B9C8D00DC5FD9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EE902C5B9C8D00DC5FD9 /* SnapKit */; };
 		CE87EE942C5B9CC100DC5FD9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EE932C5B9CC100DC5FD9 /* RxCocoa */; };
 		CE87EE962C5B9CC100DC5FD9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EE952C5B9CC100DC5FD9 /* RxSwift */; };
+		CE87EE9B2C5EA45E00DC5FD9 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */; };
+		CE87EE9D2C5EA48100DC5FD9 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,15 +38,13 @@
 		CE87EE702C5B9B2000DC5FD9 /* PointButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointButton.swift; sourceTree = "<group>"; };
 		CE87EE712C5B9B2000DC5FD9 /* SignTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignTextField.swift; sourceTree = "<group>"; };
 		CE87EE732C5B9B2000DC5FD9 /* BirthdayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
-		CE87EE742C5B9B2000DC5FD9 /* NicknameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		CE87EE752C5B9B2000DC5FD9 /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		CE87EE772C5B9B2000DC5FD9 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CE87EE782C5B9B2000DC5FD9 /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		CE87EE7B2C5B9B2000DC5FD9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		CE87EE7D2C5B9B2000DC5FD9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		CE87EE7E2C5B9B2000DC5FD9 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		CE87EE7F2C5B9B2000DC5FD9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
+		CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +82,9 @@
 			children = (
 				CE87EE5C2C5B91D100DC5FD9 /* AppDelegate.swift */,
 				CE87EE5E2C5B91D100DC5FD9 /* SceneDelegate.swift */,
-				CE87EE722C5B9B2000DC5FD9 /* CustomView */,
-				CE87EE802C5B9B2000DC5FD9 /* Search */,
-				CE87EE792C5B9B2000DC5FD9 /* SignIn */,
-				CE87EE7C2C5B9B2000DC5FD9 /* SignUp */,
-				CE87EE762C5B9B2000DC5FD9 /* SignUpOptional */,
+				CE87EE722C5B9B2000DC5FD9 /* Custom */,
+				CE87EE992C5EA3BE00DC5FD9 /* Main */,
+				CE87EE9E2C5EA4E300DC5FD9 /* Start */,
 				CE87EE622C5B91D100DC5FD9 /* Main.storyboard */,
 				CE87EE652C5B91D400DC5FD9 /* Assets.xcassets */,
 				CE87EE672C5B91D400DC5FD9 /* LaunchScreen.storyboard */,
@@ -99,23 +93,13 @@
 			path = RxSwiftPractice;
 			sourceTree = "<group>";
 		};
-		CE87EE722C5B9B2000DC5FD9 /* CustomView */ = {
+		CE87EE722C5B9B2000DC5FD9 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
 				CE87EE702C5B9B2000DC5FD9 /* PointButton.swift */,
 				CE87EE712C5B9B2000DC5FD9 /* SignTextField.swift */,
 			);
-			path = CustomView;
-			sourceTree = "<group>";
-		};
-		CE87EE762C5B9B2000DC5FD9 /* SignUpOptional */ = {
-			isa = PBXGroup;
-			children = (
-				CE87EE732C5B9B2000DC5FD9 /* BirthdayViewController.swift */,
-				CE87EE742C5B9B2000DC5FD9 /* NicknameViewController.swift */,
-				CE87EE752C5B9B2000DC5FD9 /* PhoneViewController.swift */,
-			);
-			path = SignUpOptional;
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		CE87EE792C5B9B2000DC5FD9 /* SignIn */ = {
@@ -130,20 +114,30 @@
 		CE87EE7C2C5B9B2000DC5FD9 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */,
 				CE87EE7B2C5B9B2000DC5FD9 /* SignUpViewController.swift */,
+				CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */,
+				CE87EE752C5B9B2000DC5FD9 /* PhoneViewController.swift */,
+				CE87EE732C5B9B2000DC5FD9 /* BirthdayViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		CE87EE802C5B9B2000DC5FD9 /* Search */ = {
+		CE87EE992C5EA3BE00DC5FD9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				CE87EE7D2C5B9B2000DC5FD9 /* DetailViewController.swift */,
-				CE87EE7F2C5B9B2000DC5FD9 /* SearchViewController.swift */,
-				CE87EE7E2C5B9B2000DC5FD9 /* SearchTableViewCell.swift */,
+				CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */,
+				CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */,
 			);
-			path = Search;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE87EE9E2C5EA4E300DC5FD9 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				CE87EE792C5B9B2000DC5FD9 /* SignIn */,
+				CE87EE7C2C5B9B2000DC5FD9 /* SignUp */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,8 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE87EE8C2C5B9B2000DC5FD9 /* SearchViewController.swift in Sources */,
-				CE87EE8A2C5B9B2000DC5FD9 /* DetailViewController.swift in Sources */,
+				CE87EE9D2C5EA48100DC5FD9 /* MemoViewController.swift in Sources */,
 				CE87EE822C5B9B2000DC5FD9 /* SignTextField.swift in Sources */,
 				CE87EE5D2C5B91D100DC5FD9 /* AppDelegate.swift in Sources */,
 				CE87EE882C5B9B2000DC5FD9 /* PasswordViewController.swift in Sources */,
@@ -236,10 +229,9 @@
 				CE87EE892C5B9B2000DC5FD9 /* SignUpViewController.swift in Sources */,
 				CE87EE5F2C5B91D100DC5FD9 /* SceneDelegate.swift in Sources */,
 				CE87EE862C5B9B2000DC5FD9 /* SignInViewController.swift in Sources */,
+				CE87EE9B2C5EA45E00DC5FD9 /* ShoppingViewController.swift in Sources */,
 				CE87EE852C5B9B2000DC5FD9 /* PhoneViewController.swift in Sources */,
-				CE87EE842C5B9B2000DC5FD9 /* NicknameViewController.swift in Sources */,
 				CE87EE832C5B9B2000DC5FD9 /* BirthdayViewController.swift in Sources */,
-				CE87EE8B2C5B9B2000DC5FD9 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
