@@ -27,6 +27,7 @@
 		CE87EE9D2C5EA48100DC5FD9 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */; };
 		CE87EEA02C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE9F2C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift */; };
 		CE87EEA32C5EBE5000DC5FD9 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EEA22C5EBE5000DC5FD9 /* Then */; };
+		CE87EEA52C5EC8C200DC5FD9 /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		CE87EE9F2C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
+		CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		CE87EE992C5EA3BE00DC5FD9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */,
 				CE87EE9F2C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift */,
 				CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */,
 				CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */,
@@ -231,6 +234,7 @@
 				CE87EEA02C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift in Sources */,
 				CE87EE822C5B9B2000DC5FD9 /* SignTextField.swift in Sources */,
 				CE87EE5D2C5B91D100DC5FD9 /* AppDelegate.swift in Sources */,
+				CE87EEA52C5EC8C200DC5FD9 /* ShoppingView.swift in Sources */,
 				CE87EE882C5B9B2000DC5FD9 /* PasswordViewController.swift in Sources */,
 				CE87EE812C5B9B2000DC5FD9 /* PointButton.swift in Sources */,
 				CE87EE872C5B9B2000DC5FD9 /* SignInViewModel.swift in Sources */,
