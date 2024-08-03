@@ -25,6 +25,7 @@
 		CE87EE962C5B9CC100DC5FD9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EE952C5B9CC100DC5FD9 /* RxSwift */; };
 		CE87EE9B2C5EA45E00DC5FD9 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */; };
 		CE87EE9D2C5EA48100DC5FD9 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */; };
+		CE87EEA32C5EBE5000DC5FD9 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EEA22C5EBE5000DC5FD9 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 				CE87EE962C5B9CC100DC5FD9 /* RxSwift in Frameworks */,
 				CE87EE942C5B9CC100DC5FD9 /* RxCocoa in Frameworks */,
 				CE87EE912C5B9C8D00DC5FD9 /* SnapKit in Frameworks */,
+				CE87EEA32C5EBE5000DC5FD9 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +162,7 @@
 				CE87EE902C5B9C8D00DC5FD9 /* SnapKit */,
 				CE87EE932C5B9CC100DC5FD9 /* RxCocoa */,
 				CE87EE952C5B9CC100DC5FD9 /* RxSwift */,
+				CE87EEA22C5EBE5000DC5FD9 /* Then */,
 			);
 			productName = RxSwiftPractice;
 			productReference = CE87EE592C5B91D100DC5FD9 /* RxSwiftPractice.app */;
@@ -192,6 +195,7 @@
 			packageReferences = (
 				CE87EE8F2C5B9C8D00DC5FD9 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				CE87EE922C5B9CC100DC5FD9 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				CE87EEA12C5EBE5000DC5FD9 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = CE87EE5A2C5B91D100DC5FD9 /* Products */;
 			projectDirPath = "";
@@ -470,6 +474,14 @@
 				minimumVersion = 6.7.1;
 			};
 		};
+		CE87EEA12C5EBE5000DC5FD9 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -487,6 +499,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE87EE922C5B9CC100DC5FD9 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		CE87EEA22C5EBE5000DC5FD9 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE87EEA12C5EBE5000DC5FD9 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
