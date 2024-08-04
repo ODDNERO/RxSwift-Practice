@@ -24,12 +24,6 @@ final class ShoppingViewController: UIViewController {
         Shopping(isCompleted: false, isBookmarked: false, content: "예스24 eBook 구매", memo: "1. 클린 아키텍처 - Robert C. Martin")
     ]
     private lazy var shoppingList = BehaviorSubject(value: data)
-//    private var shoppingList = BehaviorSubject(value: [
-//        Shopping(isCompleted: false, isBookmarked: true, content: "망곰이 마스킹테이프", memo: "일상망곰"),
-//        Shopping(isCompleted: true, isBookmarked: false, content: "시리얼 사기", memo: "오!그래놀라 POP 초코아몬드"),
-//        Shopping(isCompleted: false, isBookmarked: true, content: "브리타 필터 사기", memo: ""),
-//        Shopping(isCompleted: false, isBookmarked: false, content: "예스24 eBook 구매", memo: "1. 클린 아키텍처 - Robert C. Martin")
-//    ])
     private let disposeBag = DisposeBag()
     
     private let contentView = ShoppingView()
@@ -74,13 +68,6 @@ extension ShoppingViewController {
             .withLatestFrom(contentView.addTextField.rx.text.orEmpty)
             .filter { !($0.isEmpty) && ($0 != " ") }
             .bind(with: self) { owner, text in
-//                var list = try! owner.shoppingList.value()
-//                list.append(Shopping(isCompleted: false, isBookmarked: false, content: text, memo: ""))
-                
-//                var list = owner.data
-//                list.append(Shopping(isCompleted: false, isBookmarked: false, content: text, memo: ""))
-//                owner.shoppingList.onNext(list)
-                
                 owner.data.append(Shopping(isCompleted: false, isBookmarked: false, content: text, memo: ""))
                 owner.shoppingList.onNext(owner.data)
                 owner.contentView.addTextField.text = .none
@@ -98,7 +85,6 @@ extension ShoppingViewController {
         
         //SEARCH
         contentView.addTextField.rx.text.orEmpty
-//            .throttle(.seconds(1), scheduler: MainScheduler.instance)
             .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .bind(with: self) { owner, text in
@@ -106,11 +92,6 @@ extension ShoppingViewController {
                 let allData = owner.data
                 let allList = try! owner.shoppingList.value()
                 let filteredList = text.isEmpty ? allData : allList.filter { $0.content.localizedCaseInsensitiveContains(text) }
-                
-//                let filteredList = text.isEmpty ? allData : allData.filter { $0.content.localizedCaseInsensitiveContains(text) }
-//                let filteredList = text.isEmpty ? allList : allList.filter { $0.content.localizedCaseInsensitiveContains(text) }
-                print(filteredList)
-                
                 owner.shoppingList.onNext(filteredList)
             }
             .disposed(by: disposeBag)

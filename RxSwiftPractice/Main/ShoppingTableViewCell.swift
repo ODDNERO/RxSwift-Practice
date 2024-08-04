@@ -12,9 +12,9 @@ import Then
 
 final class ShoppingTableViewCell: UITableViewCell {
     static let identifier = "ShoppingTableViewCell"
-    private var disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
     
-    private let completeButton = UIButton().then {
+    let completeButton = UIButton().then {
         $0.tintColor = .black
         $0.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
         $0.contentMode = .scaleAspectFill
@@ -24,7 +24,7 @@ final class ShoppingTableViewCell: UITableViewCell {
         $0.textAlignment = .left
         $0.font = .systemFont(ofSize: 14)
     }
-    private let bookmarkButton = UIButton().then {
+    let bookmarkButton = UIButton().then {
         $0.tintColor = .black
         $0.setImage(UIImage(systemName: "star"), for: .normal)
         $0.contentMode = .scaleAspectFill

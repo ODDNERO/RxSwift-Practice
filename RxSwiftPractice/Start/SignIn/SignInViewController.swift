@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         configureView()
-        signInButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(signInButtonClicked), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
     }
     

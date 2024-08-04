@@ -14,13 +14,13 @@ final class ShoppingView: UIView {
         $0.backgroundColor = .systemGray6
         $0.layer.cornerRadius = 10
     }
-    private let addTextField = UITextField().then {
+    let addTextField = UITextField().then {
         $0.placeholder = " 🛒 쇼핑할 아이템을 추가해 보세요!"
         $0.tintColor = .black
         $0.backgroundColor = .clear
         $0.borderStyle = .none
     }
-    private let addButton = UIButton().then {
+    let addButton = UIButton().then {
         $0.setTitle("추가", for: .normal)
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 15)
@@ -33,6 +33,7 @@ final class ShoppingView: UIView {
         $0.register(ShoppingTableViewCell.self, forCellReuseIdentifier: ShoppingTableViewCell.identifier)
         $0.backgroundColor = .clear
         $0.separatorStyle = .none
+        $0.showsVerticalScrollIndicator = false
         $0.rowHeight = 55
     }
     
