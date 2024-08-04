@@ -9,7 +9,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-struct Shopping {
+struct Shopping: Identifiable {
+    let id = UUID()
     var isCompleted: Bool
     var isBookmarked: Bool
     let content: String
@@ -77,16 +78,17 @@ extension ShoppingViewController {
         //DELETED
         contentView.shoppingTableView.rx.itemDeleted
             .bind(with: self) { owner, indexPath in
-                var list = try! owner.shoppingList.value()
-                list.remove(at: indexPath.row)
-                owner.shoppingList.onNext(list)
+                var currentList = try! owner.shoppingList.value()
+                let deleteItem = currentList[indexPath.row]
+                owner.data.removeAll { $0.id == deleteItem.id }
+                currentList.removeAll { $0.id == deleteItem.id }
+                owner.shoppingList.onNext(currentList)
             }
             .disposed(by: disposeBag)
         
         //SEARCH
         contentView.addTextField.rx.text.orEmpty
-            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
-            .distinctUntilChanged()
+            .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
             .bind(with: self) { owner, text in
                 print("실시간 검색어: \(text)")
                 let allData = owner.data
