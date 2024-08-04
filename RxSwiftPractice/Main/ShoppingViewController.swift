@@ -50,16 +50,22 @@ extension ShoppingViewController {
                 //EDIT
                 cell.completeButton.rx.tap
                     .bind(with: self) { owner, _ in
-                        var list = try! owner.shoppingList.value()
-                        list[row].isCompleted.toggle()
-                        owner.shoppingList.onNext(list)
+                        var currentList = try! owner.shoppingList.value()
+                        var editItem = currentList[row]
+                        guard let index = owner.data.firstIndex(where: { $0.id == editItem.id }) else { return }
+                        owner.data[index].isCompleted.toggle()
+                        currentList[row].isCompleted.toggle()
+                        owner.shoppingList.onNext(currentList)
                     }.disposed(by: cell.disposeBag)
                 
                 cell.bookmarkButton.rx.tap
                     .bind(with: self) { owner, _ in
-                        var list = try! owner.shoppingList.value()
-                        list[row].isBookmarked.toggle()
-                        owner.shoppingList.onNext(list)
+                        var currentList = try! owner.shoppingList.value()
+                        var editItem = currentList[row]
+                        guard let index = owner.data.firstIndex(where: { $0.id == editItem.id }) else { return }
+                        owner.data[index].isBookmarked.toggle()
+                        currentList[row].isBookmarked.toggle()
+                        owner.shoppingList.onNext(currentList)
                     }.disposed(by: cell.disposeBag)
             }
             .disposed(by: disposeBag)
