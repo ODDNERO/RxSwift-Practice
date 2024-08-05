@@ -29,7 +29,7 @@ class SignInViewController: UIViewController {
         sceneDelegate.window?.makeKeyAndVisible()
     }
     @objc func signUpButtonClicked() {
-        navigationController?.pushViewController(SignUpViewController(), animated: true)
+        navigationController?.pushViewController(EmailViewController(), animated: true)
     }
 }
 

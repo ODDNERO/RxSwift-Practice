@@ -19,7 +19,7 @@
 		CE87EE862C5B9B2000DC5FD9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE772C5B9B2000DC5FD9 /* SignInViewController.swift */; };
 		CE87EE872C5B9B2000DC5FD9 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE782C5B9B2000DC5FD9 /* SignInViewModel.swift */; };
 		CE87EE882C5B9B2000DC5FD9 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */; };
-		CE87EE892C5B9B2000DC5FD9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE7B2C5B9B2000DC5FD9 /* SignUpViewController.swift */; };
+		CE87EE892C5B9B2000DC5FD9 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE7B2C5B9B2000DC5FD9 /* EmailViewController.swift */; };
 		CE87EE912C5B9C8D00DC5FD9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EE902C5B9C8D00DC5FD9 /* SnapKit */; };
 		CE87EE942C5B9CC100DC5FD9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EE932C5B9CC100DC5FD9 /* RxCocoa */; };
 		CE87EE962C5B9CC100DC5FD9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EE952C5B9CC100DC5FD9 /* RxSwift */; };
@@ -28,6 +28,7 @@
 		CE87EEA02C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE9F2C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift */; };
 		CE87EEA32C5EBE5000DC5FD9 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EEA22C5EBE5000DC5FD9 /* Then */; };
 		CE87EEA52C5EC8C200DC5FD9 /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */; };
+		CE87EEAD2C6107B100DC5FD9 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEAC2C6107B100DC5FD9 /* EmailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,11 +46,12 @@
 		CE87EE772C5B9B2000DC5FD9 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CE87EE782C5B9B2000DC5FD9 /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
-		CE87EE7B2C5B9B2000DC5FD9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CE87EE7B2C5B9B2000DC5FD9 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		CE87EE9F2C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 		CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
+		CE87EEAC2C6107B100DC5FD9 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +113,8 @@
 		CE87EE792C5B9B2000DC5FD9 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				CE87EE772C5B9B2000DC5FD9 /* SignInViewController.swift */,
 				CE87EE782C5B9B2000DC5FD9 /* SignInViewModel.swift */,
+				CE87EE772C5B9B2000DC5FD9 /* SignInViewController.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -120,7 +122,7 @@
 		CE87EE7C2C5B9B2000DC5FD9 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				CE87EE7B2C5B9B2000DC5FD9 /* SignUpViewController.swift */,
+				CE87EEAE2C6107BF00DC5FD9 /* Email */,
 				CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */,
 				CE87EE752C5B9B2000DC5FD9 /* PhoneViewController.swift */,
 				CE87EE732C5B9B2000DC5FD9 /* BirthdayViewController.swift */,
@@ -146,6 +148,15 @@
 				CE87EE7C2C5B9B2000DC5FD9 /* SignUp */,
 			);
 			path = Start;
+			sourceTree = "<group>";
+		};
+		CE87EEAE2C6107BF00DC5FD9 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				CE87EEAC2C6107B100DC5FD9 /* EmailViewModel.swift */,
+				CE87EE7B2C5B9B2000DC5FD9 /* EmailViewController.swift */,
+			);
+			path = Email;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +248,9 @@
 				CE87EEA52C5EC8C200DC5FD9 /* ShoppingView.swift in Sources */,
 				CE87EE882C5B9B2000DC5FD9 /* PasswordViewController.swift in Sources */,
 				CE87EE812C5B9B2000DC5FD9 /* PointButton.swift in Sources */,
+				CE87EEAD2C6107B100DC5FD9 /* EmailViewModel.swift in Sources */,
 				CE87EE872C5B9B2000DC5FD9 /* SignInViewModel.swift in Sources */,
-				CE87EE892C5B9B2000DC5FD9 /* SignUpViewController.swift in Sources */,
+				CE87EE892C5B9B2000DC5FD9 /* EmailViewController.swift in Sources */,
 				CE87EE5F2C5B91D100DC5FD9 /* SceneDelegate.swift in Sources */,
 				CE87EE862C5B9B2000DC5FD9 /* SignInViewController.swift in Sources */,
 				CE87EE9B2C5EA45E00DC5FD9 /* ShoppingViewController.swift in Sources */,
