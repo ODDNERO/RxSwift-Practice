@@ -141,10 +141,7 @@
 		CE87EE992C5EA3BE00DC5FD9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */,
-				CE87EE9F2C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift */,
 				CE87EEBA2C61650500DC5FD9 /* ShoppingList */,
-				CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -197,10 +194,21 @@
 		CE87EEBA2C61650500DC5FD9 /* ShoppingList */ = {
 			isa = PBXGroup;
 			children = (
+				CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */,
+				CE87EE9F2C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift */,
 				CE87EEB82C613CDF00DC5FD9 /* ShoppingViewModel.swift */,
 				CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */,
+				CE87EEBC2C616CFE00DC5FD9 /* Memo */,
 			);
 			path = ShoppingList;
+			sourceTree = "<group>";
+		};
+		CE87EEBC2C616CFE00DC5FD9 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */,
+			);
+			path = Memo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
