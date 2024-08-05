@@ -30,7 +30,7 @@ final class PasswordViewController: UIViewController {
 extension PasswordViewController {
     private func bind() {
         let input = PasswordViewModel.Input(passwordText: passwordTextField.rx.text,
-                                         nextButtonTap: nextButton.rx.tap)
+                                            nextButtonTap: nextButton.rx.tap)
         let output = viewModel.transform(input)
         
 //        validText

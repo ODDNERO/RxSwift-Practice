@@ -50,7 +50,7 @@ extension BirthdayViewModel {
                       nextButtonTap: input.nextButtonTap)
     }
     
-    func showSwitchVCAlert(to nextVC: UIViewController) {
+    func showSwitchVCAlert(_ currenVC: BirthdayViewController, to nextVC: UIViewController) {
         let alert = UIAlertController(title: "🥳 가입 완료", message: nil, preferredStyle: .alert)
         let cancel = UIAlertAction(title: "⬅️", style: .cancel)
         let finish = UIAlertAction(title: "GO!", style: .destructive) { _ in
@@ -61,6 +61,6 @@ extension BirthdayViewModel {
         }
         alert.addAction(cancel)
         alert.addAction(finish)
-        nextVC.present(alert, animated: true)
+        currenVC.present(alert, animated: true)
     }
 }
