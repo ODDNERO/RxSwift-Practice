@@ -32,6 +32,7 @@
 		CE87EEB12C611D7700DC5FD9 /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEB02C611D7700DC5FD9 /* PhoneViewModel.swift */; };
 		CE87EEB42C61242E00DC5FD9 /* BirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEB32C61242E00DC5FD9 /* BirthdayViewModel.swift */; };
 		CE87EEB72C61341D00DC5FD9 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEB62C61341D00DC5FD9 /* PasswordViewModel.swift */; };
+		CE87EEB92C613CDF00DC5FD9 /* ShoppingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEB82C613CDF00DC5FD9 /* ShoppingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		CE87EEB02C611D7700DC5FD9 /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 		CE87EEB32C61242E00DC5FD9 /* BirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewModel.swift; sourceTree = "<group>"; };
 		CE87EEB62C61341D00DC5FD9 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		CE87EEB82C613CDF00DC5FD9 /* ShoppingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +143,7 @@
 			children = (
 				CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */,
 				CE87EE9F2C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift */,
-				CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */,
+				CE87EEBA2C61650500DC5FD9 /* ShoppingList */,
 				CE87EE9C2C5EA48100DC5FD9 /* MemoViewController.swift */,
 			);
 			path = Main;
@@ -190,6 +192,15 @@
 				CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */,
 			);
 			path = Password;
+			sourceTree = "<group>";
+		};
+		CE87EEBA2C61650500DC5FD9 /* ShoppingList */ = {
+			isa = PBXGroup;
+			children = (
+				CE87EEB82C613CDF00DC5FD9 /* ShoppingViewModel.swift */,
+				CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */,
+			);
+			path = ShoppingList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +294,7 @@
 				CE87EEA52C5EC8C200DC5FD9 /* ShoppingView.swift in Sources */,
 				CE87EEB12C611D7700DC5FD9 /* PhoneViewModel.swift in Sources */,
 				CE87EE882C5B9B2000DC5FD9 /* PasswordViewController.swift in Sources */,
+				CE87EEB92C613CDF00DC5FD9 /* ShoppingViewModel.swift in Sources */,
 				CE87EE812C5B9B2000DC5FD9 /* PointButton.swift in Sources */,
 				CE87EEAD2C6107B100DC5FD9 /* EmailViewModel.swift in Sources */,
 				CE87EE872C5B9B2000DC5FD9 /* SignInViewModel.swift in Sources */,
