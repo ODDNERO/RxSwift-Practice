@@ -31,6 +31,7 @@
 		CE87EEAD2C6107B100DC5FD9 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEAC2C6107B100DC5FD9 /* EmailViewModel.swift */; };
 		CE87EEB12C611D7700DC5FD9 /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEB02C611D7700DC5FD9 /* PhoneViewModel.swift */; };
 		CE87EEB42C61242E00DC5FD9 /* BirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEB32C61242E00DC5FD9 /* BirthdayViewModel.swift */; };
+		CE87EEB72C61341D00DC5FD9 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEB62C61341D00DC5FD9 /* PasswordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		CE87EEAC2C6107B100DC5FD9 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 		CE87EEB02C611D7700DC5FD9 /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 		CE87EEB32C61242E00DC5FD9 /* BirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewModel.swift; sourceTree = "<group>"; };
+		CE87EEB62C61341D00DC5FD9 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				CE87EEAE2C6107BF00DC5FD9 /* Email */,
-				CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */,
+				CE87EEB52C6133FE00DC5FD9 /* Password */,
 				CE87EEAF2C611D6500DC5FD9 /* Phone */,
 				CE87EEB22C61240700DC5FD9 /* Birthday */,
 			);
@@ -179,6 +181,15 @@
 				CE87EE732C5B9B2000DC5FD9 /* BirthdayViewController.swift */,
 			);
 			path = Birthday;
+			sourceTree = "<group>";
+		};
+		CE87EEB52C6133FE00DC5FD9 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				CE87EEB62C61341D00DC5FD9 /* PasswordViewModel.swift */,
+				CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */,
+			);
+			path = Password;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 				CE87EEA02C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift in Sources */,
 				CE87EEB42C61242E00DC5FD9 /* BirthdayViewModel.swift in Sources */,
 				CE87EE822C5B9B2000DC5FD9 /* SignTextField.swift in Sources */,
+				CE87EEB72C61341D00DC5FD9 /* PasswordViewModel.swift in Sources */,
 				CE87EE5D2C5B91D100DC5FD9 /* AppDelegate.swift in Sources */,
 				CE87EEA52C5EC8C200DC5FD9 /* ShoppingView.swift in Sources */,
 				CE87EEB12C611D7700DC5FD9 /* PhoneViewModel.swift in Sources */,
