@@ -9,8 +9,8 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class EmailViewModel {
-    let disposeBag = DisposeBag()
+final class EmailViewModel {
+    private let disposeBag = DisposeBag()
     
     struct Input {
         let emailText: ControlProperty<String?> //emailTextField.rx.text

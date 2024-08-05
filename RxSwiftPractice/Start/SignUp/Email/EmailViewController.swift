@@ -28,8 +28,8 @@ final class EmailViewController: UIViewController {
 }
 
 extension EmailViewController {
-    func bind() {
-        let input = EmailViewModel.Input(emailText: emailTextField.rx.text, 
+    private func bind() {
+        let input = EmailViewModel.Input(emailText: emailTextField.rx.text,
                                          nextButtonTap: nextButton.rx.tap)
         let output = viewModel.transform(input)
         
@@ -61,7 +61,7 @@ extension EmailViewController {
             }.disposed(by: disposeBag)
     }
     
-    func configureView() {
+    private func configureView() {
         view.backgroundColor = .white
         validationButton.setTitle("중복 확인", for: .normal)
         validationButton.setTitleColor(.black, for: .normal)

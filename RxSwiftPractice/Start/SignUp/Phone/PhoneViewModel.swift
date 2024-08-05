@@ -9,9 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class PhoneViewModel {
-    let validText = Observable.just("연락처는 8자 이상")
-    
+final class PhoneViewModel {
     struct Input {
         let phoneText: ControlProperty<String?> //phoneTextField.rx.text
         let nextButtonTap : ControlEvent<Void>  //nextButton.rx.tap

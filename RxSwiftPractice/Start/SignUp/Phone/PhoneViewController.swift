@@ -10,14 +10,14 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class PhoneViewController: UIViewController {
-    let viewModel = PhoneViewModel()
+final class PhoneViewController: UIViewController {
+    private let viewModel = PhoneViewModel()
     
-//    let initialPhoneText = Observable.just("010") //뷰모델로 이동
-    let disposeBag = DisposeBag()
+//    private let initialPhoneText = Observable.just("010") //뷰모델로 이동
+    private let disposeBag = DisposeBag()
     
-    let phoneTextField = SignTextField(placeholderText: "연락처를 입력해 주세요")
-    let nextButton = PointButton(title: "다음")
+    private let phoneTextField = SignTextField(placeholderText: "연락처를 입력해 주세요")
+    private let nextButton = PointButton(title: "다음")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,8 @@ class PhoneViewController: UIViewController {
 }
 
 extension PhoneViewController {
-    func bind() {
-        let input = PhoneViewModel.Input(phoneText: phoneTextField.rx.text, 
+    private func bind() {
+        let input = PhoneViewModel.Input(phoneText: phoneTextField.rx.text,
                                          nextButtonTap: nextButton.rx.tap)
         let output = viewModel.transform(input)
         
@@ -62,7 +62,7 @@ extension PhoneViewController {
             }.disposed(by: disposeBag)
     }
     
-    func configureView() {
+    private func configureView() {
         view.backgroundColor = .white
         phoneTextField.keyboardType = .namePhonePad
         
