@@ -11,7 +11,9 @@ import RxSwift
 import RxCocoa
 
 class PhoneViewController: UIViewController {
-    let phoneNumberText = Observable.just("010")
+    let viewModel = PhoneViewModel()
+    
+//    let initialPhoneText = Observable.just("010") //뷰모델로 이동
     let disposeBag = DisposeBag()
     
     let phoneTextField = SignTextField(placeholderText: "연락처를 입력해 주세요")
@@ -26,29 +28,38 @@ class PhoneViewController: UIViewController {
 
 extension PhoneViewController {
     func bind() {
-        phoneNumberText.bind(to: phoneTextField.rx.text)
+        let input = PhoneViewModel.Input(phoneText: phoneTextField.rx.text, 
+                                         nextButtonTap: nextButton.rx.tap)
+        let output = viewModel.transform(input)
+        
+        output.initialPhoneText
+            .bind(to: phoneTextField.rx.text)
             .disposed(by: disposeBag)
         
+        /* MARK: 뷰모델로 이동
         let numericOnly = phoneTextField.rx.text.orEmpty
             .map { $0.filter { $0.isNumber } }
-        numericOnly
+        */
+        
+        output.numericOnly
             .bind(to: phoneTextField.rx.text)
             .disposed(by: disposeBag)
 
+        /* MARK: 뷰모델로 이동
         let isValid = phoneTextField.rx.text.orEmpty
             .map { $0.count >= 10 }
-        isValid
+         */
+         
+        output.isValidPhone
             .bind(with: self) { owner, value in
-                owner.nextButton.backgroundColor = value ? .systemGreen : .lightGray
                 owner.nextButton.isEnabled = value
-            }
-            .disposed(by: disposeBag)
+                owner.nextButton.backgroundColor = value ? .systemGreen : .lightGray
+            }.disposed(by: disposeBag)
         
-        nextButton.rx.tap
+        output.nextButtonTap
             .bind(with: self) { owner, _ in
                 owner.navigationController?.pushViewController(BirthdayViewController(), animated: true)
-            }
-            .disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
     }
     
     func configureView() {

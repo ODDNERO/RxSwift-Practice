@@ -29,6 +29,7 @@
 		CE87EEA32C5EBE5000DC5FD9 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = CE87EEA22C5EBE5000DC5FD9 /* Then */; };
 		CE87EEA52C5EC8C200DC5FD9 /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */; };
 		CE87EEAD2C6107B100DC5FD9 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEAC2C6107B100DC5FD9 /* EmailViewModel.swift */; };
+		CE87EEB12C611D7700DC5FD9 /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EEB02C611D7700DC5FD9 /* PhoneViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		CE87EE9F2C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 		CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
 		CE87EEAC2C6107B100DC5FD9 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
+		CE87EEB02C611D7700DC5FD9 /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +126,7 @@
 			children = (
 				CE87EEAE2C6107BF00DC5FD9 /* Email */,
 				CE87EE7A2C5B9B2000DC5FD9 /* PasswordViewController.swift */,
-				CE87EE752C5B9B2000DC5FD9 /* PhoneViewController.swift */,
+				CE87EEAF2C611D6500DC5FD9 /* Phone */,
 				CE87EE732C5B9B2000DC5FD9 /* BirthdayViewController.swift */,
 			);
 			path = SignUp;
@@ -157,6 +159,15 @@
 				CE87EE7B2C5B9B2000DC5FD9 /* EmailViewController.swift */,
 			);
 			path = Email;
+			sourceTree = "<group>";
+		};
+		CE87EEAF2C611D6500DC5FD9 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				CE87EEB02C611D7700DC5FD9 /* PhoneViewModel.swift */,
+				CE87EE752C5B9B2000DC5FD9 /* PhoneViewController.swift */,
+			);
+			path = Phone;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 				CE87EE822C5B9B2000DC5FD9 /* SignTextField.swift in Sources */,
 				CE87EE5D2C5B91D100DC5FD9 /* AppDelegate.swift in Sources */,
 				CE87EEA52C5EC8C200DC5FD9 /* ShoppingView.swift in Sources */,
+				CE87EEB12C611D7700DC5FD9 /* PhoneViewModel.swift in Sources */,
 				CE87EE882C5B9B2000DC5FD9 /* PasswordViewController.swift in Sources */,
 				CE87EE812C5B9B2000DC5FD9 /* PointButton.swift in Sources */,
 				CE87EEAD2C6107B100DC5FD9 /* EmailViewModel.swift in Sources */,
