@@ -30,7 +30,7 @@ final class ShoppingViewModel {
     struct Input {
         let addContentText: ControlProperty<String?>  //addTextField.rx.text
         let addButtonTap: ControlEvent<Void>          //addButton.rx.tap
-        let deleteAction: ControlEvent<IndexPath>     //shoppingTableView.rx.itemDeleted
+        let deleteAction: ControlEvent<Shopping>      //shoppingTableView.rx.modelDeleted(Shopping.self)
         let toggleCompleteRowIndex: PublishRelay<Int>
         let toggleBookmarkRowIndex: PublishRelay<Int>
         let contentSelect: ControlEvent<Shopping>     //shoppingTableView.rx.modelSelected(Shopping.self)
@@ -78,11 +78,11 @@ extension ShoppingViewModel {
                 owner.shoppingList.accept(owner.data)
             }.disposed(by: disposeBag)
     }
-    private func deleteShopping(on action: ControlEvent<IndexPath>) {
+    private func deleteShopping(on action: ControlEvent<Shopping>) {
         action
-            .bind(with: self) { owner, indexPath in
+            .bind(with: self) { owner, item in
+                let deleteItem = item
                 var currentList = owner.shoppingList.value
-                let deleteItem = currentList[indexPath.row]
                 owner.data.removeAll { $0.id == deleteItem.id }
                 currentList.removeAll { $0.id == deleteItem.id }
                 owner.shoppingList.accept(currentList)

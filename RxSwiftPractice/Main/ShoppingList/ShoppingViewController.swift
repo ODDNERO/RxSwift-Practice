@@ -33,7 +33,7 @@ extension ShoppingViewController {
         
         let input = ShoppingViewModel.Input(addContentText: contentView.addTextField.rx.text,
                                             addButtonTap: contentView.addButton.rx.tap, 
-                                            deleteAction: contentView.shoppingTableView.rx.itemDeleted, 
+                                            deleteAction: contentView.shoppingTableView.rx.modelDeleted(Shopping.self),
                                             toggleCompleteRowIndex: toggleCompleteRowIndex,
                                             toggleBookmarkRowIndex: toggleBookmarkRowIndex,
                                             contentSelect: contentView.shoppingTableView.rx.modelSelected(Shopping.self))
@@ -57,9 +57,9 @@ extension ShoppingViewController {
             .disposed(by: disposeBag)
         
         output.addButtonTap
-            .bind(with: self) { owner, _ in
-                owner.contentView.addTextField.text = .none
-            }.disposed(by: disposeBag)
+            .map { "" }
+            .bind(to: contentView.addTextField.rx.text)
+            .disposed(by: disposeBag)
         
         output.contentSelect
             .bind(with: self) { owner, shopping in
