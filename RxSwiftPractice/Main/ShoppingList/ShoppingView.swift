@@ -40,7 +40,6 @@ final class ShoppingView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
-        print("ShoppingView initialized")
     }
     
     @available(*, unavailable)

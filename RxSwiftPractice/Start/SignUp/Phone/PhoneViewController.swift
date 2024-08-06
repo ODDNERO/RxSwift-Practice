@@ -12,8 +12,6 @@ import RxCocoa
 
 final class PhoneViewController: UIViewController {
     private let viewModel = PhoneViewModel()
-    
-//    private let initialPhoneText = Observable.just("010") //뷰모델로 이동
     private let disposeBag = DisposeBag()
     
     private let phoneTextField = SignTextField(placeholderText: "연락처를 입력해 주세요")
@@ -36,20 +34,10 @@ extension PhoneViewController {
             .bind(to: phoneTextField.rx.text)
             .disposed(by: disposeBag)
         
-        /* MARK: 뷰모델로 이동
-        let numericOnly = phoneTextField.rx.text.orEmpty
-            .map { $0.filter { $0.isNumber } }
-        */
-        
         output.numericOnly
             .bind(to: phoneTextField.rx.text)
             .disposed(by: disposeBag)
 
-        /* MARK: 뷰모델로 이동
-        let isValid = phoneTextField.rx.text.orEmpty
-            .map { $0.count >= 10 }
-         */
-         
         output.isValidPhone
             .bind(with: self) { owner, value in
                 owner.nextButton.isEnabled = value

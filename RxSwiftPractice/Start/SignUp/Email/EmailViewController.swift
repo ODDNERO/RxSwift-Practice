@@ -32,11 +32,6 @@ extension EmailViewController {
         let input = EmailViewModel.Input(emailText: emailTextField.rx.text,
                                          nextButtonTap: nextButton.rx.tap)
         let output = viewModel.transform(input)
-        
-        /* MARK: 뷰모델로 이동
-        let isValid = emailTextField.rx.text.orEmpty
-            .map { $0.count >= 4 }
-        */
 
         output.isValidEmail
             .bind(with: self) { owner, value in

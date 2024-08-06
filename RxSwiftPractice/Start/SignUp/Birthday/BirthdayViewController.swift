@@ -12,14 +12,6 @@ import RxCocoa
 
 final class BirthdayViewController: UIViewController {
     private let viewModel = BirthdayViewModel()
-    
-    /* MARK: 뷰모델로 이동
-    let current = Calendar.current.dateComponents([.year, .month, .day], from: Date())
-    lazy var year = BehaviorRelay(value: current.year!)
-    lazy var month = BehaviorRelay(value: current.month!)
-    lazy var day = BehaviorRelay(value: current.day!)
-    let age = BehaviorRelay(value: 0)
-     */
     private let disposeBag = DisposeBag()
     
     private let descriptionLabel = UILabel()
@@ -72,32 +64,11 @@ final class BirthdayViewController: UIViewController {
 }
 
 extension BirthdayViewController {
-    /* MARK: 뷰모델로 이동
-    func bindDate(_ owner: BirthdayViewController, _ date: ControlProperty<Date>.Element) {
-        let pickerDate = Calendar.current.dateComponents([.day, .month, .year], from: date)
-        owner.year.accept(pickerDate.year!)
-        owner.month.accept(pickerDate.month!)
-        owner.day.accept(pickerDate.day!)
-        owner.age.accept(current.year! - pickerDate.year!)
-    }
-    */
-     
     private func bind() {
         let input = BirthdayViewModel.Input(birthDate: birthDayPicker.rx.date,
                                             nextButtonTap: nextButton.rx.tap)
         let output = viewModel.transform(input)
         
-        /* MARK: 뷰모델로 이동
-        birthDayPicker.rx.date
-            .bind(with: self) { owner, date in
-                owner.bindDate(owner, date)
-            }.disposed(by: disposeBag)
-        */
-         
-        /* MARK: 뷰모델로 이동
-        let isValid = age.map { $0 >= 17 }
-        */
-         
         output.isValidAge
             .bind(with: self) { owner, value in
                 owner.descriptionLabel.text = value ? "가입 가능한 나이입니다" : "만 17세 이상만 가입 가능합니다."
@@ -127,22 +98,6 @@ extension BirthdayViewController {
 }
  
 extension BirthdayViewController {
-    /* MARK: 뷰모델로 이동
-    func showSwitchVCAlert(to nextVC: UIViewController) {
-        let alert = UIAlertController(title: "🥳 가입 완료", message: nil, preferredStyle: .alert)
-        let cancel = UIAlertAction(title: "⬅️", style: .cancel)
-        let finish = UIAlertAction(title: "GO!", style: .destructive) { _ in
-            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
-            guard let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
-            sceneDelegate.window?.rootViewController = UINavigationController(rootViewController: nextVC)
-            sceneDelegate.window?.makeKeyAndVisible()
-        }
-        alert.addAction(cancel)
-        alert.addAction(finish)
-        present(alert, animated: true)
-    }
-    */
-     
     private func configureView() {
         view.backgroundColor = .white
         
