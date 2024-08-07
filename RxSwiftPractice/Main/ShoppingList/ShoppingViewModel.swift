@@ -78,6 +78,7 @@ extension ShoppingViewModel {
 extension ShoppingViewModel {
     private func addShopping(_ text: Observable<String>, on action: ControlEvent<Void>) {
         action.withLatestFrom(text)
+            .distinctUntilChanged()
             .filter { !($0.isEmpty) && ($0 != " ") }
             .bind(with: self) { owner, text in
                 owner.shoppingData.append(Shopping(isCompleted: false, isBookmarked: false, content: text, memo: ""))
