@@ -28,20 +28,23 @@ final class ShoppingViewController: UIViewController {
 
 extension ShoppingViewController {
     private func bind() {
+        let keywordSelect: ControlEvent<Void> = ControlEvent(events: contentView.shoppingCollectionView.rx.itemSelected.map { _ in () })
         let toggleCompleteRowIndex = PublishRelay<Int>()
         let toggleBookmarkRowIndex = PublishRelay<Int>()
         
         let input = ShoppingViewModel.Input(addContentText: contentView.addTextField.rx.text,
-                                            addButtonTap: contentView.addButton.rx.tap, 
-                                            deleteAction: contentView.shoppingTableView.rx.modelDeleted(Shopping.self),
+                                            addButtonTap: contentView.addButton.rx.tap,
+                                            keywordText: contentView.shoppingCollectionView.rx.modelSelected(String.self),
+                                            keywordSelect: keywordSelect,
                                             toggleCompleteRowIndex: toggleCompleteRowIndex,
                                             toggleBookmarkRowIndex: toggleBookmarkRowIndex,
+                                            deleteAction: contentView.shoppingTableView.rx.modelDeleted(Shopping.self), 
                                             contentSelect: contentView.shoppingTableView.rx.modelSelected(Shopping.self))
         let output = viewModel.transform(input)
         
         viewModel.recommendationList
             .bind(to: contentView.shoppingCollectionView.rx.items(cellIdentifier: ShoppingCollectionViewCell.identifier, cellType: ShoppingCollectionViewCell.self)) { (row, element, cell) in
-                cell.keywordLabel.text = element
+                cell.setupKeyword(element)
             }
             .disposed(by: disposeBag)
         

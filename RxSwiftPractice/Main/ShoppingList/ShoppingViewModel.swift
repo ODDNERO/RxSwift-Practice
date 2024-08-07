@@ -31,9 +31,13 @@ final class ShoppingViewModel {
     struct Input {
         let addContentText: ControlProperty<String?>  //addTextField.rx.text
         let addButtonTap: ControlEvent<Void>          //addButton.rx.tap
-        let deleteAction: ControlEvent<Shopping>      //shoppingTableView.rx.modelDeleted(Shopping.self)
+        
+        let keywordText: ControlEvent<String>         //shoppingCollectionView.rx.modelSelected(String.self)
+        let keywordSelect: ControlEvent<Void>         //shoppingCollectionView.rx.itemSelected
+        
         let toggleCompleteRowIndex: PublishRelay<Int>
         let toggleBookmarkRowIndex: PublishRelay<Int>
+        let deleteAction: ControlEvent<Shopping>      //shoppingTableView.rx.modelDeleted(Shopping.self)
         let contentSelect: ControlEvent<Shopping>     //shoppingTableView.rx.modelSelected(Shopping.self)
     }
     struct Output {
@@ -47,7 +51,8 @@ extension ShoppingViewModel {
     func transform(_ input: Input) -> Output {
         searchShopping(input.addContentText)
         
-        addShopping(input.addContentText, on: input.addButtonTap)
+        addShopping(input.addContentText.orEmpty.asObservable(), on: input.addButtonTap)
+        addShopping(input.keywordText.asObservable(), on: input.keywordSelect)
         deleteShopping(on: input.deleteAction)
         
         updateCompleteState(at: input.toggleCompleteRowIndex)
@@ -71,8 +76,8 @@ extension ShoppingViewModel {
 }
 
 extension ShoppingViewModel {
-    private func addShopping(_ text: ControlProperty<String?>, on action: ControlEvent<Void>) {
-        action.withLatestFrom(text.orEmpty)
+    private func addShopping(_ text: Observable<String>, on action: ControlEvent<Void>) {
+        action.withLatestFrom(text)
             .filter { !($0.isEmpty) && ($0 != " ") }
             .bind(with: self) { owner, text in
                 owner.shoppingData.append(Shopping(isCompleted: false, isBookmarked: false, content: text, memo: ""))

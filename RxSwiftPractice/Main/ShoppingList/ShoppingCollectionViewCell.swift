@@ -14,7 +14,7 @@ final class ShoppingCollectionViewCell: UICollectionViewCell {
     static let identifier = "ShoppingCollectionViewCell"
     var disposeBag = DisposeBag()
     
-    let keywordLabel = UILabel().then {
+    private let keywordLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 15)
         $0.textAlignment = .center
     }
@@ -35,6 +35,10 @@ final class ShoppingCollectionViewCell: UICollectionViewCell {
 }
 
 extension ShoppingCollectionViewCell {
+    func setupKeyword(_ data: String) {
+        keywordLabel.text = data
+    }
+    
     private func configureView() {
         self.backgroundColor = .systemGray6
         self.layer.cornerRadius = 10
