@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4601DB2C63A22900B9355C /* ShoppingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4601DA2C63A22900B9355C /* ShoppingCollectionViewCell.swift */; };
 		CE87EE5D2C5B91D100DC5FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE5C2C5B91D100DC5FD9 /* AppDelegate.swift */; };
 		CE87EE5F2C5B91D100DC5FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE5E2C5B91D100DC5FD9 /* SceneDelegate.swift */; };
 		CE87EE642C5B91D100DC5FD9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE87EE632C5B91D100DC5FD9 /* Base */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE4601DA2C63A22900B9355C /* ShoppingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE87EE592C5B91D100DC5FD9 /* RxSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE87EE5C2C5B91D100DC5FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE87EE5E2C5B91D100DC5FD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				CE87EEA42C5EC8C200DC5FD9 /* ShoppingView.swift */,
+				CE4601DA2C63A22900B9355C /* ShoppingCollectionViewCell.swift */,
 				CE87EE9F2C5EBCA300DC5FD9 /* ShoppingTableViewCell.swift */,
 				CE87EEB82C613CDF00DC5FD9 /* ShoppingViewModel.swift */,
 				CE87EE9A2C5EA45E00DC5FD9 /* ShoppingViewController.swift */,
@@ -311,6 +314,7 @@
 				CE87EE862C5B9B2000DC5FD9 /* SignInViewController.swift in Sources */,
 				CE87EE9B2C5EA45E00DC5FD9 /* ShoppingViewController.swift in Sources */,
 				CE87EE852C5B9B2000DC5FD9 /* PhoneViewController.swift in Sources */,
+				CE4601DB2C63A22900B9355C /* ShoppingCollectionViewCell.swift in Sources */,
 				CE87EE832C5B9B2000DC5FD9 /* BirthdayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,6 +29,11 @@ final class ShoppingView: UIView {
         $0.layer.cornerRadius = 10
     }
     
+    let shoppingCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout()).then {
+        $0.register(ShoppingCollectionViewCell.self, forCellWithReuseIdentifier: ShoppingCollectionViewCell.identifier)
+        $0.backgroundColor = .clear
+        $0.showsHorizontalScrollIndicator = false
+    }
     let shoppingTableView = UITableView().then {
         $0.register(ShoppingTableViewCell.self, forCellReuseIdentifier: ShoppingTableViewCell.identifier)
         $0.backgroundColor = .clear
@@ -49,10 +54,18 @@ final class ShoppingView: UIView {
 }
 
 extension ShoppingView {
+    static func layout() -> UICollectionViewFlowLayout {
+        UICollectionViewFlowLayout().then {
+            $0.itemSize = CGSize(width: 65, height: 35)
+            $0.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+            $0.scrollDirection = .horizontal
+        }
+    }
+    
     private func configureView() {
         self.backgroundColor = .white
         
-        [addView, shoppingTableView].forEach { self.addSubview($0) }
+        [addView, shoppingCollectionView, shoppingTableView].forEach { self.addSubview($0) }
         [addTextField, addButton].forEach { addView.addSubview($0) }
         
         addView.snp.makeConstraints {
@@ -70,8 +83,13 @@ extension ShoppingView {
             $0.width.equalTo(55)
         }
         
+        shoppingCollectionView.snp.makeConstraints {
+            $0.top.equalTo(addView.snp.bottom)
+            $0.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
+            $0.height.equalTo(55)
+        }
         shoppingTableView.snp.makeConstraints {
-            $0.top.equalTo(addView.snp.bottom).offset(15)
+            $0.top.equalTo(shoppingCollectionView.snp.bottom)
             $0.horizontalEdges.equalTo(self.safeAreaLayoutGuide).inset(15)
             $0.bottom.equalTo(self.safeAreaLayoutGuide)
         }

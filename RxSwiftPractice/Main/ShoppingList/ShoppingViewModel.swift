@@ -18,13 +18,14 @@ struct Shopping: Identifiable {
 }
 
 final class ShoppingViewModel {
-    private var data = [
+    let recommendationList = BehaviorRelay(value: ["짐색", "버뮤다", "레인부츠", "손풍기", "볼캡", "키보드", "샌들", "텀블러", "모니터", "선크림"].shuffled())
+    private var shoppingData = [
         Shopping(isCompleted: false, isBookmarked: true, content: "망곰이 마스킹테이프", memo: "일상망곰"),
         Shopping(isCompleted: true, isBookmarked: false, content: "시리얼 사기", memo: "오!그래놀라 POP 초코아몬드"),
         Shopping(isCompleted: false, isBookmarked: true, content: "브리타 필터 사기", memo: ""),
         Shopping(isCompleted: false, isBookmarked: false, content: "예스24 eBook 구매", memo: "1. 클린 아키텍처 - Robert C. Martin")
     ]
-    private lazy var shoppingList = BehaviorRelay(value: data)
+    private lazy var shoppingList = BehaviorRelay(value: shoppingData)
     private let disposeBag = DisposeBag()
     
     struct Input {
@@ -61,7 +62,7 @@ extension ShoppingViewModel {
         text.orEmpty
             .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
             .bind(with: self) { owner, text in
-                let allData = owner.data
+                let allData = owner.shoppingData
                 let allList = owner.shoppingList.value
                 let filteredList = text.isEmpty ? allData : allList.filter { $0.content.localizedCaseInsensitiveContains(text) }
                 owner.shoppingList.accept(filteredList)
@@ -74,8 +75,8 @@ extension ShoppingViewModel {
         action.withLatestFrom(text.orEmpty)
             .filter { !($0.isEmpty) && ($0 != " ") }
             .bind(with: self) { owner, text in
-                owner.data.append(Shopping(isCompleted: false, isBookmarked: false, content: text, memo: ""))
-                owner.shoppingList.accept(owner.data)
+                owner.shoppingData.append(Shopping(isCompleted: false, isBookmarked: false, content: text, memo: ""))
+                owner.shoppingList.accept(owner.shoppingData)
             }.disposed(by: disposeBag)
     }
     private func deleteShopping(on action: ControlEvent<Shopping>) {
@@ -83,7 +84,7 @@ extension ShoppingViewModel {
             .bind(with: self) { owner, item in
                 let deleteItem = item
                 var currentList = owner.shoppingList.value
-                owner.data.removeAll { $0.id == deleteItem.id }
+                owner.shoppingData.removeAll { $0.id == deleteItem.id }
                 currentList.removeAll { $0.id == deleteItem.id }
                 owner.shoppingList.accept(currentList)
             }.disposed(by: disposeBag)
@@ -94,8 +95,8 @@ extension ShoppingViewModel {
             .bind(with: self) { owner, row in
                 var currentList = owner.shoppingList.value
                 let editItem = currentList[row]
-                guard let index = owner.data.firstIndex(where: { $0.id == editItem.id }) else { return }
-                owner.data[index].isCompleted.toggle()
+                guard let index = owner.shoppingData.firstIndex(where: { $0.id == editItem.id }) else { return }
+                owner.shoppingData[index].isCompleted.toggle()
                 currentList[row].isCompleted.toggle()
                 owner.shoppingList.accept(currentList)
             }.disposed(by: disposeBag)
@@ -105,8 +106,8 @@ extension ShoppingViewModel {
             .bind(with: self) { owner, row in
                 var currentList = owner.shoppingList.value
                 let editItem = currentList[row]
-                guard let index = owner.data.firstIndex(where: { $0.id == editItem.id }) else { return }
-                owner.data[index].isBookmarked.toggle()
+                guard let index = owner.shoppingData.firstIndex(where: { $0.id == editItem.id }) else { return }
+                owner.shoppingData[index].isBookmarked.toggle()
                 currentList[row].isBookmarked.toggle()
                 owner.shoppingList.accept(currentList)
             }.disposed(by: disposeBag)

@@ -39,6 +39,12 @@ extension ShoppingViewController {
                                             contentSelect: contentView.shoppingTableView.rx.modelSelected(Shopping.self))
         let output = viewModel.transform(input)
         
+        viewModel.recommendationList
+            .bind(to: contentView.shoppingCollectionView.rx.items(cellIdentifier: ShoppingCollectionViewCell.identifier, cellType: ShoppingCollectionViewCell.self)) { (row, element, cell) in
+                cell.keywordLabel.text = element
+            }
+            .disposed(by: disposeBag)
+        
         output.userShoppingList
             .bind(to: contentView.shoppingTableView.rx.items(cellIdentifier: ShoppingTableViewCell.identifier, cellType: ShoppingTableViewCell.self)) { (row, element, cell) in
                 cell.setupContentText(element)
