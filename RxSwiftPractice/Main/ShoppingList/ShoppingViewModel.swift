@@ -65,11 +65,14 @@ extension ShoppingViewModel {
     
     private func searchShopping(_ text: ControlProperty<String?>) {
         text.orEmpty
+            .compactMap { $0.replacingOccurrences(of: " ", with: "") }
             .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
             .bind(with: self) { owner, text in
                 let allData = owner.shoppingData
                 let allList = owner.shoppingList.value
-                let filteredList = text.isEmpty ? allData : allList.filter { $0.content.localizedCaseInsensitiveContains(text) }
+                let filteredList = text.isEmpty ? allData : allList.filter {
+                    $0.content.replacingOccurrences(of: " ", with: "").localizedCaseInsensitiveContains(text)
+                }
                 owner.shoppingList.accept(filteredList)
             }.disposed(by: disposeBag)
     }
@@ -79,7 +82,8 @@ extension ShoppingViewModel {
     private func addShopping(_ text: Observable<String>, on action: ControlEvent<Void>) {
         action.withLatestFrom(text)
             .distinctUntilChanged()
-            .filter { !($0.isEmpty) && ($0 != " ") }
+            .compactMap { $0.trimmingCharacters(in: .whitespaces) }
+            .filter { !$0.isEmpty }
             .bind(with: self) { owner, text in
                 owner.shoppingData.append(Shopping(isCompleted: false, isBookmarked: false, content: text, memo: ""))
                 owner.shoppingList.accept(owner.shoppingData)
