@@ -65,6 +65,13 @@ extension ShoppingViewController {
             }
             .disposed(by: disposeBag)
         
+        Observable.combineLatest(contentView.addButton.rx.tap, keywordSelect)
+            .subscribe(with: self) { owner, text in
+                let section = owner.contentView.shoppingTableView.numberOfSections - 1
+                let row = owner.contentView.shoppingTableView.numberOfRows(inSection: section) - 1
+                owner.contentView.shoppingTableView.scrollToRow(at: IndexPath(row: row, section: section), at: .bottom, animated: true)
+            }.disposed(by: disposeBag)
+        
         output.addButtonTap
             .map { "" }
             .bind(to: contentView.addTextField.rx.text)
