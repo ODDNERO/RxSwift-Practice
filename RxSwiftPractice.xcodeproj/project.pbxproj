@@ -11,6 +11,7 @@
 		CE4601D72C630B1800B9355C /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4601D62C630B1800B9355C /* MovieCollectionViewCell.swift */; };
 		CE4601D92C630B4F00B9355C /* BoxOfficeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4601D82C630B4F00B9355C /* BoxOfficeView.swift */; };
 		CE4601DB2C63A22900B9355C /* ShoppingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4601DA2C63A22900B9355C /* ShoppingCollectionViewCell.swift */; };
+		CE4601DD2C64510C00B9355C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4601DC2C64510C00B9355C /* NetworkManager.swift */; };
 		CE4601DF2C64527300B9355C /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4601DE2C64527300B9355C /* BoxOffice.swift */; };
 		CE46021F2C676E2700B9355C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46021E2C676E2700B9355C /* APIKey.swift */; };
 		CE87EE5D2C5B91D100DC5FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE5C2C5B91D100DC5FD9 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 		CE4601D62C630B1800B9355C /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE4601D82C630B4F00B9355C /* BoxOfficeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeView.swift; sourceTree = "<group>"; };
 		CE4601DA2C63A22900B9355C /* ShoppingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE4601DC2C64510C00B9355C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CE4601DE2C64527300B9355C /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
 		CE46021E2C676E2700B9355C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		CE87EE592C5B91D100DC5FD9 /* RxSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 			children = (
 				CE46021E2C676E2700B9355C /* APIKey.swift */,
 				CE4601DE2C64527300B9355C /* BoxOffice.swift */,
+				CE4601DC2C64510C00B9355C /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				CE87EEB92C613CDF00DC5FD9 /* ShoppingViewModel.swift in Sources */,
 				CE87EE812C5B9B2000DC5FD9 /* PointButton.swift in Sources */,
 				CE87EEAD2C6107B100DC5FD9 /* EmailViewModel.swift in Sources */,
+				CE4601DD2C64510C00B9355C /* NetworkManager.swift in Sources */,
 				CE87EE872C5B9B2000DC5FD9 /* SignInViewModel.swift in Sources */,
 				CE46021F2C676E2700B9355C /* APIKey.swift in Sources */,
 				CE87EE892C5B9B2000DC5FD9 /* EmailViewController.swift in Sources */,
