@@ -15,6 +15,7 @@
 		CE4601DB2C63A22900B9355C /* ShoppingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4601DA2C63A22900B9355C /* ShoppingCollectionViewCell.swift */; };
 		CE4601DD2C64510C00B9355C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4601DC2C64510C00B9355C /* NetworkManager.swift */; };
 		CE4601DF2C64527300B9355C /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4601DE2C64527300B9355C /* BoxOffice.swift */; };
+		CE46021D2C676A9700B9355C /* TapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46021C2C676A9700B9355C /* TapBarController.swift */; };
 		CE46021F2C676E2700B9355C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46021E2C676E2700B9355C /* APIKey.swift */; };
 		CE87EE5D2C5B91D100DC5FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE5C2C5B91D100DC5FD9 /* AppDelegate.swift */; };
 		CE87EE5F2C5B91D100DC5FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE5E2C5B91D100DC5FD9 /* SceneDelegate.swift */; };
@@ -53,6 +54,7 @@
 		CE4601DA2C63A22900B9355C /* ShoppingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE4601DC2C64510C00B9355C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CE4601DE2C64527300B9355C /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
+		CE46021C2C676A9700B9355C /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		CE46021E2C676E2700B9355C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		CE87EE592C5B91D100DC5FD9 /* RxSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE87EE5C2C5B91D100DC5FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		CE87EE992C5EA3BE00DC5FD9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CE46021C2C676A9700B9355C /* TapBarController.swift */,
 				CE87EEBA2C61650500DC5FD9 /* ShoppingList */,
 				CE4601CF2C630AA800B9355C /* BoxOffice */,
 			);
@@ -351,6 +354,7 @@
 				CE87EE882C5B9B2000DC5FD9 /* PasswordViewController.swift in Sources */,
 				CE87EEB92C613CDF00DC5FD9 /* ShoppingViewModel.swift in Sources */,
 				CE87EE812C5B9B2000DC5FD9 /* PointButton.swift in Sources */,
+				CE46021D2C676A9700B9355C /* TapBarController.swift in Sources */,
 				CE87EEAD2C6107B100DC5FD9 /* EmailViewModel.swift in Sources */,
 				CE4601DD2C64510C00B9355C /* NetworkManager.swift in Sources */,
 				CE87EE872C5B9B2000DC5FD9 /* SignInViewModel.swift in Sources */,

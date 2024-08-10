@@ -25,7 +25,7 @@ class SignInViewController: UIViewController {
     @objc func signInButtonClicked() {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
         guard let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
-        sceneDelegate.window?.rootViewController = UINavigationController(rootViewController: ShoppingViewController())
+        sceneDelegate.window?.rootViewController = TabBarController()
         sceneDelegate.window?.makeKeyAndVisible()
     }
     @objc func signUpButtonClicked() {

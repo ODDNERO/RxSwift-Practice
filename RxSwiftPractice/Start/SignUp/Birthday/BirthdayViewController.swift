@@ -79,7 +79,7 @@ extension BirthdayViewController {
         
         output.nextButtonTap
             .bind(with: self) { owner, _ in
-                owner.viewModel.showSwitchVCAlert(owner, to: ShoppingViewController())
+                owner.viewModel.showSwitchVCAlert(owner, to: TabBarController())
             }.disposed(by: disposeBag)
         
         output.year

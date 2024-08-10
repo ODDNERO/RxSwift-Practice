@@ -56,7 +56,7 @@ extension BirthdayViewModel {
         let finish = UIAlertAction(title: "GO!", style: .destructive) { _ in
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
             guard let sceneDelegate = windowScene.delegate as? SceneDelegate else { return }
-            sceneDelegate.window?.rootViewController = UINavigationController(rootViewController: nextVC)
+            sceneDelegate.window?.rootViewController = nextVC
             sceneDelegate.window?.makeKeyAndVisible()
         }
         alert.addAction(cancel)
