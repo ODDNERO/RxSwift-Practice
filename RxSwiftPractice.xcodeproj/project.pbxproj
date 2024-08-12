@@ -108,7 +108,6 @@
 		CE4601CF2C630AA800B9355C /* BoxOffice */ = {
 			isa = PBXGroup;
 			children = (
-				CE4601E02C64528300B9355C /* Network */,
 				CE4601D82C630B4F00B9355C /* BoxOfficeView.swift */,
 				CE4601D62C630B1800B9355C /* MovieCollectionViewCell.swift */,
 				CE4601D42C630B0600B9355C /* MovieTableViewCell.swift */,
@@ -121,11 +120,37 @@
 		CE4601E02C64528300B9355C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CE46021E2C676E2700B9355C /* APIKey.swift */,
-				CE4601DE2C64527300B9355C /* BoxOffice.swift */,
 				CE4601DC2C64510C00B9355C /* NetworkManager.swift */,
+				CE46021E2C676E2700B9355C /* APIKey.swift */,
+				CE46023C2C69A85200B9355C /* Model */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		CE4602392C69A7FD00B9355C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CE4601E02C64528300B9355C /* Network */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CE46023C2C69A85200B9355C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE46023A2C69A81800B9355C /* Joke.swift */,
+				CE4601DE2C64527300B9355C /* BoxOffice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE4602412C69B05D00B9355C /* Nickname */ = {
+			isa = PBXGroup;
+			children = (
+				CE46023F2C69AC0600B9355C /* NicknameViewModel.swift */,
+				CE46023D2C69AB6800B9355C /* NicknameViewController.swift */,
+			);
+			path = Nickname;
 			sourceTree = "<group>";
 		};
 		CE87EE502C5B91D100DC5FD9 = {
@@ -149,6 +174,7 @@
 			children = (
 				CE87EE5C2C5B91D100DC5FD9 /* AppDelegate.swift */,
 				CE87EE5E2C5B91D100DC5FD9 /* SceneDelegate.swift */,
+				CE4602392C69A7FD00B9355C /* Util */,
 				CE87EE722C5B9B2000DC5FD9 /* Custom */,
 				CE87EE992C5EA3BE00DC5FD9 /* Main */,
 				CE87EE9E2C5EA4E300DC5FD9 /* Start */,
@@ -184,6 +210,7 @@
 				CE87EEAE2C6107BF00DC5FD9 /* Email */,
 				CE87EEB52C6133FE00DC5FD9 /* Password */,
 				CE87EEAF2C611D6500DC5FD9 /* Phone */,
+				CE4602412C69B05D00B9355C /* Nickname */,
 				CE87EEB22C61240700DC5FD9 /* Birthday */,
 			);
 			path = SignUp;
