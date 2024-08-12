@@ -48,8 +48,8 @@ extension BoxOfficeViewModel {
             .map { "\($0)" } //다시 string으로 == "\(dateText)"
             .flatMap { dateText in //map => Observable<BoxOffice> | flatMap => BoxOffice
                 print(dateText)
-                print(NetworkManager.requestAPI(date: dateText))
-                return NetworkManager.requestAPI(date: dateText)
+                print(NetworkManager.requestBoxOffice(date: dateText))
+                return NetworkManager.requestBoxOffice(date: dateText)
                 //옵저버블 이벤트 방출! Observable<RxSwiftPractice.BoxOffice>
             }
             .debug("3")

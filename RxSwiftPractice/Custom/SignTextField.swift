@@ -12,6 +12,7 @@ class SignTextField: UITextField {
     init(placeholderText: String) {
         super.init(frame: .zero)
         textColor = .black
+        tintColor = .black
         placeholder = placeholderText
         textAlignment = .center
         borderStyle = .none

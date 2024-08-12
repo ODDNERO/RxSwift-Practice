@@ -46,7 +46,7 @@ extension PhoneViewController {
         
         output.nextButtonTap
             .bind(with: self) { owner, _ in
-                owner.navigationController?.pushViewController(BirthdayViewController(), animated: true)
+                owner.navigationController?.pushViewController(NicknameViewController(), animated: true)
             }.disposed(by: disposeBag)
     }
     
