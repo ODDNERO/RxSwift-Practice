@@ -19,6 +19,7 @@
 		CE46021F2C676E2700B9355C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46021E2C676E2700B9355C /* APIKey.swift */; };
 		CE4602382C69A75600B9355C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE4602372C69A75600B9355C /* Alamofire */; };
 		CE46023B2C69A81800B9355C /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46023A2C69A81800B9355C /* Joke.swift */; };
+		CE46023E2C69AB6800B9355C /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46023D2C69AB6800B9355C /* NicknameViewController.swift */; };
 		CE4602402C69AC0600B9355C /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46023F2C69AC0600B9355C /* NicknameViewModel.swift */; };
 		CE87EE5D2C5B91D100DC5FD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE5C2C5B91D100DC5FD9 /* AppDelegate.swift */; };
 		CE87EE5F2C5B91D100DC5FD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87EE5E2C5B91D100DC5FD9 /* SceneDelegate.swift */; };
@@ -60,6 +61,7 @@
 		CE46021C2C676A9700B9355C /* TapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarController.swift; sourceTree = "<group>"; };
 		CE46021E2C676E2700B9355C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		CE46023A2C69A81800B9355C /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		CE46023D2C69AB6800B9355C /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		CE46023F2C69AC0600B9355C /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
 		CE87EE592C5B91D100DC5FD9 /* RxSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE87EE5C2C5B91D100DC5FD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				CE87EEB72C61341D00DC5FD9 /* PasswordViewModel.swift in Sources */,
 				CE4601D92C630B4F00B9355C /* BoxOfficeView.swift in Sources */,
 				CE87EE5D2C5B91D100DC5FD9 /* AppDelegate.swift in Sources */,
+				CE46023E2C69AB6800B9355C /* NicknameViewController.swift in Sources */,
 				CE87EEA52C5EC8C200DC5FD9 /* ShoppingView.swift in Sources */,
 				CE87EEB12C611D7700DC5FD9 /* PhoneViewModel.swift in Sources */,
 				CE4601D12C630AC800B9355C /* BoxOfficeViewController.swift in Sources */,
