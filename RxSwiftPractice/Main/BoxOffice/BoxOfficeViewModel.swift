@@ -38,21 +38,21 @@ extension BoxOfficeViewModel {
             }.disposed(by: disposeBag)
         
         input.searchButtonTap //서치바 엔터 -> 네트워크 통신 진행
-            .withLatestFrom(input.searchText.orEmpty).debug("체크 1")
+            .withLatestFrom(input.searchText.orEmpty)
             .distinctUntilChanged()
             .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
             .map { dateText in
                 guard let intText = Int(dateText) else { return 20240807 }
                 return intText
-            }.debug("체크 2")
+            }
             .map { "\($0)" } //다시 string으로 == "\(dateText)"
             .flatMap { dateText in //map => Observable<BoxOffice> | flatMap => BoxOffice
-                print(dateText)
-                print(NetworkManager.requestBoxOffice(date: dateText))
+                //옵저버블 이벤트 방출! Observable<BoxOffice>
                 return NetworkManager.requestBoxOffice(date: dateText)
-                //옵저버블 이벤트 방출! Observable<RxSwiftPractice.BoxOffice>
+                    .catch { error in
+                        return Observable<BoxOffice>.never()
+                    }
             }
-            .debug("3")
             .subscribe(with: self) { owner, boxOffice in
                 print(boxOffice.boxOfficeResult.dailyBoxOfficeList)
                 print("Next: \(boxOffice)")
