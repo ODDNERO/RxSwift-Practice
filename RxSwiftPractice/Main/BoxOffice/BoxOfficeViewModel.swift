@@ -47,10 +47,18 @@ extension BoxOfficeViewModel {
             }
             .map { "\($0)" } //다시 string으로 == "\(dateText)"
             .flatMap { dateText in //map => Observable<BoxOffice> | flatMap => BoxOffice
-                //옵저버블 이벤트 방출! Observable<BoxOffice>
-                return NetworkManager.requestBoxOffice(date: dateText)
+                
+                /* MARK: - BoxOffice API -> Observable 타입 반환
+                return NetworkManager.requestBoxOffice(date: dateText) //-> Observable<BoxOffice>
                     .catch { error in
                         return Observable<BoxOffice>.never()
+                    }
+                 */
+                
+                //MARK: - BoxOffice API -> Single 타입 반환
+                return NetworkManager.requestBoxOfficeWithSingle(date: dateText)
+                    .catch { error in
+                        return Single<BoxOffice>.never()
                     }
             }
             .subscribe(with: self) { owner, boxOffice in
